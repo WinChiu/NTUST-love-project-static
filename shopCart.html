@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop cart</title>
+    <link
+      rel="preload"
+      as="font"
+      href="./asset/font/GenSekiGothic-M.woff"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./asset/font/GenSekiGothic-R.woff"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./asset/font/GenSekiGothic-L.woff"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./asset/font/CascadiaCodePL-SemiBold.ttf"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/scss/style.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+      integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  </head>
+  <body id="shopCartBody">
+    <section class="shopCartSection">
+      <div class="introScreen">
+        <div class="bottomWords">
+          <div class="bottomWords__upper">
+            <div class="bottomWords__block bottomWords__upper--block">
+              <img
+                src="./asset/img/shopCartPage/icon_death.svg"
+                alt="icon_death"
+              />
+              <p>理性消費</p>
+            </div>
+            <div class="bottomWords__block bottomWords__upper--block">
+              <img
+                src="./asset/img/shopCartPage/icon_smile.svg"
+                alt="icon_smile"
+              />
+              <p>下好離手</p>
+            </div>
+            <div class="bottomWords__block bottomWords__upper--block">
+              <img
+                src="./asset/img/shopCartPage/icon_death.svg"
+                alt="icon_death"
+              />
+              <p>精打細算</p>
+            </div>
+            <div class="bottomWords__block bottomWords__upper--block">
+              <img
+                src="./asset/img/shopCartPage/icon_smile.svg"
+                alt="icon_smile"
+              />
+              <p>真心選購</p>
+            </div>
+            <div class="bottomWords__block bottomWords__upper--block">
+              <img
+                src="./asset/img/shopCartPage/icon_death.svg"
+                alt="icon_death"
+              />
+              <p>猶豫不決</p>
+            </div>
+            <div class="bottomWords__block bottomWords__upper--block">
+              <img
+                src="./asset/img/shopCartPage/icon_smile.svg"
+                alt="icon_smile"
+              />
+              <p>貸款購買</p>
+            </div>
+          </div>
+          <div class="bottomWords__down">
+            <div class="bottomWords__block bottomWords__down--block">
+              <img
+                src="./asset/img/shopCartPage/icon_death.svg"
+                alt="icon_death"
+              />
+              <p>寒酸過節</p>
+            </div>
+            <div class="bottomWords__block bottomWords__down--block">
+              <img
+                src="./asset/img/shopCartPage/icon_smile.svg"
+                alt="icon_smile"
+              />
+              <p>分期付款</p>
+            </div>
+            <div class="bottomWords__block bottomWords__down--block">
+              <img
+                src="./asset/img/shopCartPage/icon_death.svg"
+                alt="icon_death"
+              />
+              <p>考慮預算</p>
+            </div>
+            <div class="bottomWords__block bottomWords__down--block">
+              <img
+                src="./asset/img/shopCartPage/icon_smile.svg"
+                alt="icon_smile"
+              />
+              <p>喪心病狂</p>
+            </div>
+            <div class="bottomWords__block bottomWords__down--block">
+              <img
+                src="./asset/img/shopCartPage/icon_death.svg"
+                alt="icon_death"
+              />
+              <p>現實考量</p>
+            </div>
+            <div class="bottomWords__block bottomWords__down--block">
+              <img
+                src="./asset/img/shopCartPage/icon_smile.svg"
+                alt="icon_smile"
+              />
+              <p>浪漫情懷</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkoutScreen">
+        <span class="checking">結帳中...</span>
+        <span class="priceWord">$<span class="totalPrice">0</span>NT</span>
+      </div>
+      <div class="marquee marquee-shop marquee-shopping">
+        ♥ 2022選禮指標：原價購買才顯誠意！♥ 鑽戒秒殺 限量必買 ♥
+        生日客製蛋糕送貨到府 排場氣勢做足 ♥ 幸福是為他/她刷卡 ♥
+        百款代寫情書新上市 ♥ 節日將至 高級香檳搶購趁現在 ♥
+        限時購！愛他/她就買它！
+      </div>
+      <div class="marquee marquee-shop marquee-check">
+        情人節前請準備好···情人節前請準備好···情人節前請準備好···幸福與你的距離還有···幸福與你的距離還有···幸福離你的距離還有···本次消費金額為···本次消費金額為···本次消費金額為···愛情是不計代價的刷下···愛情是不計代價的刷下···愛情是不計代價的刷下···成為理想情人的門檻為···成為理想情人的門檻為···成為理想情人的門檻為···
+      </div>
+      <div class="commodityTag">
+        <div class="commodityTag__leftNum">
+          <p class="commodityTag__leftNum--num">(1)</p>
+        </div>
+        <div class="commodityTag__rightWordBlock">
+          <p class="commodityTag__rightWordBlock--title">Title</p>
+          <p class="commodityTag__rightWordBlock--content">
+            This is a testing content
+          </p>
+        </div>
+      </div>
+      <img
+        src="./asset/img/shopCartPage/cart.webp"
+        alt="cart"
+        class="shopCart__cart"
+      />
+      <img
+        src="./asset/img/shopCartPage/cashRegister.webp"
+        alt="cashRegister"
+        class="cashRegister"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_aj1.webp"
+        alt="commodity_aj1"
+        class="draggable commodity_aj1 commodity"
+        data-status="out"
+        data-num="13"
+        data-title="af1"
+        data-price="10000"
+        data-description="作為情侶鞋剛剛好"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_balloon.webp"
+        alt="commodity_balloon"
+        class="draggable commodity_balloon commodity"
+        data-status="out"
+        data-num="7"
+        data-title="愛心氣球"
+        data-price="79"
+        data-description="節慶生日不能少，社群媒體上展現多彩生活的派對小物"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_birthdayCake.webp"
+        alt="commodity_birthdayCake"
+        class="draggable commodity_birthdayCake commodity"
+        data-status="out"
+        data-num="12"
+        data-title="生日蛋糕"
+        data-price="1569"
+        data-description="不是客製蛋糕已經沒人要收，藉此展現你有多了解另一半的審美和口味讓感情升級"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_chanel.webp"
+        alt="commodity_chanel"
+        class="draggable commodity_chanel commodity"
+        data-status="out"
+        data-num="2"
+        data-title="香奈兒五號"
+        data-price="6080"
+        data-description="一瓶聞起來像女人的香水獻給你的女人"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_ferrero.webp"
+        alt="commodity_ferrero"
+        class="draggable commodity_ferrero commodity"
+        data-status="out"
+        data-num="16"
+        data-title="金莎"
+        data-price="39"
+        data-description="情人節必買，回味初戀的滋味比什麼都美好"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_joMalone.webp"
+        alt="commodity_joMalone"
+        class="draggable commodity_joMalone commodity"
+        data-status="out"
+        data-num="5"
+        data-title="香水"
+        data-price="5250"
+        data-description="儀式感滿滿，維持愛情的那味兒"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_key.webp"
+        alt="commodity_key"
+        class="draggable commodity_key commodity"
+        data-status="out"
+        data-num="1"
+        data-title="鑰匙"
+        data-price="536800000"
+        data-description="一棟房換一輩子的安全感剛剛好"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_lamborghini.webp"
+        alt="commodity_lamborghini"
+        class="draggable commodity_lamborghini commodity"
+        data-status="out"
+        data-num="11"
+        data-title="藍寶堅尼"
+        data-price="20000000"
+        data-description="男人不酷女人不愛，無人能敵的把妹利器"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_mail.webp"
+        alt="commodity_mail"
+        class="draggable commodity_mail commodity"
+        data-status="out"
+        data-num="15"
+        data-title="代寫情書"
+        data-price="300"
+        data-description="來不及手寫情書就用現成的，照樣擄獲人心"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_moon.webp"
+        alt="commodity_moon"
+        class="draggable commodity_moon commodity"
+        data-status="out"
+        data-num="17"
+        data-title="月亮"
+        data-price="6000000000"
+        data-description="沒有什麼比摘下月亮送給心上人更浪漫，成為愛情征服大師就選這個！"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_ring.webp"
+        alt="commodity_ring"
+        class="draggable commodity_ring commodity"
+        data-status="out"
+        data-num="14"
+        data-title="鑽戒"
+        data-price="10000"
+        data-description="沒有哪個女人會嫌棄鑽石太大，越大越愛便是真理"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_rolex.webp"
+        alt="commodity_rolex"
+        class="draggable commodity_rolex commodity"
+        data-status="out"
+        data-num="10"
+        data-title="勞力士"
+        data-price="300000"
+        data-description="成功人士的象徵，不管是送禮或自用都未戀愛增添可能，美好未來的入場券"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_rose.webp"
+        alt="commodity_rose"
+        class="draggable commodity_rose commodity"
+        data-status="out"
+        data-num="4"
+        data-title="紅玫瑰"
+        data-price="120"
+        data-description="CP值最高，維持愛情的基本開銷"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_teddy.webp"
+        alt="commodity_teddy"
+        class="draggable commodity_teddy commodity"
+        data-status="out"
+        data-num="8"
+        data-title="泰迪熊"
+        data-price="21500"
+        data-description="帶女孩回到純真年代，經典老牌送禮首選，買低價仿冒品就輸了！"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_weddingCake.webp"
+        alt="commodity_weddingCake"
+        class="draggable commodity_weddingCake commodity"
+        data-status="out"
+        data-num="6"
+        data-title="三層蛋糕"
+        data-price="5000"
+        data-description="夢中婚禮的必備條件"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_wine.webp"
+        alt="commodity_wine"
+        class="draggable commodity_wine commodity"
+        data-status="out"
+        data-num="9"
+        data-title="香檳"
+        data-price="9400"
+        data-description="儀式感是用錢砸出來的，香檳冒泡像你的女人美得冒泡"
+      />
+      <img
+        src="./asset/img/shopCartPage/commodity_ysl.webp"
+        alt="commodity_ysl"
+        class="draggable commodity_ysl commodity"
+        data-status="out"
+        data-num="3"
+        data-title="口紅"
+        data-price="1380"
+        data-description="千元換另一半的莞爾一笑，怎麼想都划算"
+      />
+    </section>
+    <script src="./src/js/shopCart.js"></script>
+  </body>
+</html>
